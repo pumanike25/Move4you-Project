@@ -6,7 +6,6 @@
 
 **Maps4u** is a native Android application developed as an **Undergraduate Graduation Thesis Project (Lucență)**. It serves as an eco-friendly navigation system and a highly secure social platform, blending mapping functionality, real-time meetup organization, gamified sustainability tracking, and strict zero-knowledge privacy through End-to-End Encryption (E2EE).
 
----
 
 ## Key Features
 
@@ -35,7 +34,6 @@ Integrates custom responsive web widgets built with JavaScript libraries (Chart.
 * **Privacy Toggles:** Switch profile settings between **Public** and **Private**. Private profiles hide achievements from other platform members entirely, leaving only the friend request feature.
 * **Showcase Registry:** Users can actively configure and highlight a maximum of 3 unlocked trophies to exhibit on their public-facing boards.
 
----
 
 ## Technical Architecture
 
@@ -44,7 +42,6 @@ Integrates custom responsive web widgets built with JavaScript libraries (Chart.
 * **Backend Cloud Infrastructure:** Firebase Authentication, Cloud Firestore (Real-time streams), Google Services core router.
 * **Security Subsystem:** Java Cryptography Architecture (JCA), `java.security` providers, Android Hardware KeyStore Provider.
 
----
 
 ## Security Implementation (E2EE RSA)
 
@@ -57,7 +54,6 @@ The application handles communication privacy using a multi-step asymmetric encr
    * The raw text parameter is entirely skipped (`""`), and `isEncrypted` is flagged to `true`.
 4. **Local Decryption:** Inside `ChatAdapter`, the local private key is pulled from the hardware seif to safely decode the corresponding encrypted stream in real-time.
 
----
 
 ## Testing Suite
 
@@ -72,7 +68,6 @@ Maps4u includes a robust testing package consisting of local unit tests (validat
 ### Instrumented UI Tests (`app/src/androidTest/java/`)
 * **`UIValidationTest`:** Leverages **Espresso** on a running emulator/device to validate interface layout visibility conditions, active tab switches, and biometric edit constraints.
 
----
 
 ## Local Setup & Configuration
 
