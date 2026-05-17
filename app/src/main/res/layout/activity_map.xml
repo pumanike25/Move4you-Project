@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            app:tabIndicatorColor="@color/primary"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorFullWidth="false"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabTextColor="@android:color/black"
+            app:tabSelectedTextColor="@color/primary"
+            android:contentDescription="@string/tabs_content_description">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/car_tab"
+                android:contentDescription="@string/car_tab_content_description"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/walking_tab"
+                android:contentDescription="@string/walking_tab_content_description"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bicycle_tab"
+                android:contentDescription="@string/bicycle_tab_content_description"/>
+        </com.google.android.material.tabs.TabLayout>
+
+        <LinearLayout
+            android:id="@+id/infoLayout"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp">
+
+            <!-- Car Stats View -->
+            <LinearLayout
+                android:id="@+id/carStatsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/durationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/duration"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/distanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/distance"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/fuelConsumptionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fuel_consumption_na"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/co2EmissionsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/co2_emissions_na"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="8dp"/>
+
+                <!-- CO2 Rating and Progress Bar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/co2RatingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/eco_rating_default"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/progress_bar_background">
+
+                        <View
+                            android:id="@+id/progressIndicator"
+                            android:layout_width="4dp"
+                            android:layout_height="30dp"
+                            android:background="@color/black"
+                            android:layout_marginTop="-3dp"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/eco_good"
+                            android:textSize="12sp"
+                            android:textColor="#4CAF50"
+                            android:textAlignment="textStart"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/eco_average"
+                            android:textSize="12sp"
+                            android:textColor="#FFC107"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/eco_poor"
+                            android:textSize="12sp"
+                            android:textColor="#F44336"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Walking Stats View -->
+            <LinearLayout
+                android:id="@+id/walkingStatsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/walkingDurationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/walking_duration_default"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/walkingDistanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/walking_distance_default"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/caloriesBurnedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calories_burned_default"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/healthBenefitsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/health_benefits_default"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="8dp"/>
+            </LinearLayout>
+
+            <!-- Bicycle Stats View -->
+            <LinearLayout
+                android:id="@+id/bicycleStatsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/bicycleDurationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bicycle_duration_default"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/bicycleDistanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bicycle_distance_default"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/bicycleCaloriesText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bicycle_calories_default"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/bicycleHealthText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bicycle_health_default"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="8dp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/selectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/select_transport"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/back"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

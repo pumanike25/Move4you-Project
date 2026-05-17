@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/drawer_profile"
+            android:icon="@drawable/ic_person"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/drawer_history"
+            android:icon="@drawable/ic_history"
+            android:title="History" />
+        <item
+            android:id="@+id/drawer_statistics"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="My Dashboard (Stats)" />
+        <item
+            android:id="@+id/drawer_trophies"
+            android:icon="@android:drawable/star_big_on"
+            android:title="My Trophies" />
+        <item
+            android:id="@+id/drawer_favorites"
+            android:icon="@android:drawable/btn_star"
+            android:title="Favorite Locations" />
+    </group>
+
+    <item android:title="My Vehicle">
+        <menu>
+            <item
+                android:id="@+id/drawer_car_engine"
+                android:icon="@drawable/ic_transport"
+                android:title="Choose Car / Engine" />
+        </menu>
+    </item>
+
+    <item android:title="Settings &amp; Account">
+        <menu>
+            <item
+                android:id="@+id/drawer_upload_image"
+                android:icon="@drawable/ic_person"
+                android:title="Upload Profile Photo" />
+
+            <item
+                android:id="@+id/drawer_logout"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>

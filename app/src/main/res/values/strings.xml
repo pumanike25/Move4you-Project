@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Maps4u</string>
+
+    <string name="statistiscs_tab">Graphics</string>
+    <string name="statistiscs_tab_content_description">Graphs information tab</string>
+    <string name="walking_stats_tab">Walking statistics</string>
+    <string name="walking_stats_tab_content_description">Walking stats information tab</string>
+
+    <string name="user_data_tab">User Data</string>
+    <string name="user_data_tab_content_description">User data tab</string>
+
+    <!-- Transport tabs -->
+    <string name="car_tab">Car</string>
+    <string name="car_tab_content_description">Car transportation mode tab</string>
+    <string name="walking_tab">Walking</string>
+    <string name="walking_tab_content_description">Walking transportation mode tab</string>
+    <string name="bicycle_tab">Bicycle</string>
+    <string name="bicycle_tab_content_description">Bicycle transportation mode tab</string>
+
+    <!-- Common strings -->
+    <string name="distance">Distance</string>
+    <string name="duration">Duration</string>
+    <string name="back">Back</string>
+    <string name="select_transport">Select Transport</string>
+    <string name="tabs_content_description">Transportation mode tabs</string>
+
+    <!-- Car stats -->
+    <string name="fuel_consumption_na">Fuel Consumption: N/A</string>
+    <string name="co2_emissions_na">CO2 Emissions: N/A</string>
+    <string name="eco_rating_default">Eco Rating: </string>
+    <string name="eco_good">Good</string>
+    <string name="eco_average">Average</string>
+    <string name="eco_poor">Poor</string>
+
+    <!-- Walking stats -->
+    <string name="walking_duration_default">Walking Duration: </string>
+    <string name="walking_distance_default">Walking Distance: </string>
+    <string name="calories_burned_default">Calories Burned: </string>
+    <string name="health_benefits_default">Health Benefits: </string>
+
+    <!-- Bicycle stats -->
+    <string name="bicycle_duration_default">Bicycle Duration: </string>
+    <string name="bicycle_distance_default">Bicycle Distance: </string>
+    <string name="bicycle_calories_default">Calories Burned: </string>
+    <string name="bicycle_health_default">Health Benefits: </string>
+
+    <!-- Format strings (used in code) -->
+    <string name="fuel_consumption">Fuel Consumption: %s L</string>
+    <string name="co2_emissions">CO2 Emissions: %s g</string>
+    <string name="walking_duration">Walking Duration: %d minutes</string>
+    <string name="walking_distance">Walking Distance: %.2f km</string>
+    <string name="calories_burned">Calories Burned: %.1f kcal</string>
+    <string name="bicycle_duration">Bicycle Duration: %d minutes</string>
+    <string name="bicycle_distance">Bicycle Distance: %.2f km</string>
+    <string name="bicycle_calories">Calories Burned: %.1f kcal</string>
+    <string name="eco_rating">Eco Rating: %s</string>
+
+    <!-- Health benefits -->
+    <string name="health_benefits_short">Health Benefits: Short walk, better than nothing!</string>
+    <string name="health_benefits_moderate">Health Benefits: Good exercise for heart health</string>
+    <string name="health_benefits_long">Health Benefits: Excellent workout! Great for fitness</string>
+    <string name="bicycle_health_short">Health Benefits: Light cycling exercise</string>
+    <string name="bicycle_health_moderate">Health Benefits: Good cardio workout</string>
+    <string name="bicycle_health_long">Health Benefits: Great endurance exercise!</string>
+
+    <string name="eco_rating_excellent">Excellent</string>
+    <string name="eco_rating_good">Good</string>
+    <string name="eco_rating_average">Average</string>
+    <string name="eco_rating_poor">Poor</string>
+
+
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="fuel_types">
+        <item>Gasoline</item>
+        <item>Diesel</item>
+        <item>LPG</item>
+        <item>Hybrid</item>
+        <item>Electric</item>
+    </string-array>
+
+    <string-array name="co2_categories">
+        <item>Low (0-50 g/km)</item>
+        <item>Medium (51-120 g/km)</item>
+        <item>High (121-200 g/km)</item>
+        <item>Very High (201+ g/km)</item>
+    </string-array>
+</resources>

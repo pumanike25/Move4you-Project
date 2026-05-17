@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="56dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:paddingHorizontal="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#F0FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/menuIcon"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_menu"
+                            android:layout_marginEnd="12dp"
+                            app:tint="@color/black"
+                            android:contentDescription="Menu"/>
+
+                        <EditText
+                            android:id="@+id/locinput"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="Current Location"
+                            android:inputType="text"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="16sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/btn_gps"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_mylocation"
+                            app:tint="@color/primary"
+                            android:layout_marginStart="8dp"
+                            android:contentDescription="GPS"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/destinationContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_transport"
+                            android:layout_marginEnd="12dp"
+                            app:tint="@color/primary"/>
+
+                        <EditText
+                            android:id="@+id/desiredinput"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="Where to?"
+                            android:textColor="@color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="16sp"
+                            android:padding="8dp"
+                            android:inputType="text"/>
+
+                        <Button
+                            android:id="@+id/btn_go"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:text="GO"
+                            android:textSize="12sp"
+                            android:backgroundTint="@color/primary"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/stepsCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/searchCard"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#CCFFFFFF">
+
+                <TextView
+                    android:id="@+id/tvStepCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Steps: 0"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/locationInfoCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stepsCard"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:text="Selected Location"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/selectedAddressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Loading address..."
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="end">
+
+                        <Button
+                            android:id="@+id/btn_save_favorite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Save Favorite"
+                            android:textSize="12sp"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_marginEnd="8dp"/>
+
+                        <Button
+                            android:id="@+id/btn_go_here"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Go Here"
+                            android:textSize="12sp"
+                            android:backgroundTint="@color/primary"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btnDiscover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="80dp"
+            android:text="Discover Nearby"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            app:icon="@android:drawable/ic_menu_compass"
+            app:iconTint="@color/white"
+            android:elevation="6dp" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:menu="@menu/bottom_nav_menu"
+            app:labelVisibilityMode="labeled"
+            app:itemIconTint="@color/primary"
+            app:itemTextColor="@color/primary"
+            app:elevation="8dp"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

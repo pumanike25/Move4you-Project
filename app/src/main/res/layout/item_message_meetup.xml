@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/meetupContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_meetup_card"
+        android:elevation="3dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                app:tint="@color/primary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meetup Invitation"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMeetupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meetup Name"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvMeetupDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description..."
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="#616161"
+            android:layout_marginTop="4dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvMeetupAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address: ..."
+            android:textColor="#424242"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tvMeetupTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scheduled for: ..."
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvMeetupStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: PENDING"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/llMeetupActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnDeclineMeetup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Decline"
+                android:textColor="@color/white"
+                android:backgroundTint="#F44336"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnAcceptMeetup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Accept"
+                android:textColor="@color/white"
+                android:backgroundTint="#4CAF50"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

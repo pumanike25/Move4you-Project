@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height (cm):"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/etHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter height in cm"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight (kg):"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter weight in kg"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age:"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your age"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Step Goal:"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/etStepGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter daily step goal"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="10000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly money to save:"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/etMoneyGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monthly Money Goal (€)"
+        android:inputType="number"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"/>
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"/>
+    </RadioGroup>
+</LinearLayout>

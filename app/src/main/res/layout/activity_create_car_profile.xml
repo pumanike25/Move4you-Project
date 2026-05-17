@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Custom Car Profile"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Car Name"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/carNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter car name"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Year"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/carYearEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter year"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fuel Consumption (L/100km)"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/fuelConsumptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter fuel consumption"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fuel Type"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <Spinner
+            android:id="@+id/fuelTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CO2 Emissions Category"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <Spinner
+            android:id="@+id/co2CategorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Car Profile"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
