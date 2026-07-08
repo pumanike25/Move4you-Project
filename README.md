@@ -4,7 +4,7 @@
 [![Encryption](https://img.shields.io/badge/Security-E2EE%20RSA-0052CC?logo=lock&logoColor=white)](#-security-implementation-e2ee)
 [![Testing](https://img.shields.io/badge/Tests-JUnit%20%26%20Espresso-4CAF50?logo=github-actions&logoColor=white)](#-testing-suite)
 
-**Maps4u** is a native Android application developed as an **Undergraduate Graduation Thesis Project (Lucență)**. It serves as an eco-friendly navigation system and a highly secure social platform, blending mapping functionality, real-time meetup organization, gamified sustainability tracking, and strict zero-knowledge privacy through End-to-End Encryption (E2EE).
+**Move4you** is a native Android application developed as an **Undergraduate Graduation Thesis Project (Lucență)**. It serves as an eco-friendly navigation system and a highly secure social platform, blending mapping functionality, real-time meetup organization, gamified sustainability tracking, and strict zero-knowledge privacy through End-to-End Encryption (E2EE).
 
 
 ## Key Features
